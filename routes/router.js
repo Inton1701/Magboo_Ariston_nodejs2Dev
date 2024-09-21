@@ -1,11 +1,12 @@
 const express = require('express');
 const router = express.Router();
-const animal =  require('../controller/animal');
-router.get('/',animal.anim);
-router.get('/dog', animal.dog);
-router.get('/lion', animal.lion);
-router.get('/cow', animal.cow);
-router.get('/goat', animal.goat);
-router.get('/cat', animal.cat);
-
+const template =  require('../controller/templateController');
+router.get('/', template.index);
+router.get('/shop', template.shopGrid);
+router.get('/shop-details', template.shopDetails);
+router.get('/shoping-cart', template.shopCart);
+router.get('/checkout', template.check);
+router.get('/blog-details', template.details);
+router.get('/blog', template.blog);
+router.get('/contact', template.contacts);
 module.exports = router;
